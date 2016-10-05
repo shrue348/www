@@ -1,0 +1,87 @@
+body { background-color: #292C33; color: #ccc; }
+
+ul { margin: 0; padding: 0;}
+li { list-style: none;}
+img { max-width: 100%;}
+
+input, textarea { -webkit-appearance: none; background-color: #343841;}
+.form-control { background-color: #343841; border-color: #40444F; color: #fff;}
+.btn-default { background-color: #2776C5; border-color: #40444F; color: #fff;}
+
+
+.aligncenter { text-align: center; }
+
+.box.expand-transition, .box { 
+	/*padding: 4px; 
+	background-color: #f4f4f4; */
+	/*border: 1px solid #d4d4d4; 
+	overflow: hidden;
+	border-radius: 4px; */
+	margin-bottom: 20px; 
+	padding: 0;
+}
+
+.container { min-width: 320px;}
+.pagi { text-align: center;}
+.nowrap { white-space: nowrap;}
+
+h1 { 
+	font-size: 24px; 
+	text-align: center; 
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: 100; color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);}
+
+.btn-default.focus, .btn-default:focus {
+    background-color: #fff;
+    border-color: #CCCCCC;
+    color: #333333;
+}
+
+.input-group, .list-group { box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.15); }
+.list-group-item { border-color: #40444F; background-color: #343841;}
+a.list-group-item:focus, a.list-group-item:hover, a.list-group-item:active, button.list-group-item:focus, button.list-group-item:hover {background-color: #2C5C90 !important; color: #fff !important;}
+.list-group-item img { width: 100%;}
+
+
+#app.container { min-height: 100vh; box-sizing: border-box; padding-bottom: 50px; position: relative; }
+
+h1 > img, h1 > span { margin-bottom: 5px; font-weight: 100; }
+
+header {
+	margin-top: 10px;
+	-webkit-transform: translateY(30vh);
+	transform: translateY(30vh);
+	-webkit-transition: transform 0.2s ease;
+	transition: transform 0.2s ease;
+}
+header.finded {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+footer { position: absolute; z-index: 2; bottom: 0; left: 0; right: 0; margin: auto; text-align: center;}
+
+/* always present */
+.expand-transition {
+  transition: opacity 0.2s ease 0.2s;
+  height: 100%;
+  padding: 10px;
+}
+/* .expand-enter defines the starting state for entering */
+/* .expand-leave defines the ending state for leaving */
+.expand-enter, .expand-leave {
+  height: 0;
+  padding: 0 10px;
+  opacity: 0;
+}
+
+.page_count { margin-top: 5px; }
+.date { color: #2776c5; font-size: 12px;}
+
+
+@media (max-width: 480px) {
+	h1 { font-size: 20px;}
+
+	#app.container { padding-left: 7px; padding-right: 7px;}
+
+}

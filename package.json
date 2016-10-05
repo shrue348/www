@@ -1,0 +1,16 @@
+{
+  "name": "vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1 ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "vue"
+  },
+  "author": "shure348",
+  "license": "MIT"
+}
