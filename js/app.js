@@ -21,7 +21,8 @@ var app = new Vue({
 	data: data,
 	methods: {
 		searchQuery: function() {
-			var searchLine = 'https://api.themoviedb.org/3/search/movie?api_key='+ this.apiKey +
+			var searchLine = 'https://api.themoviedb.org/3/search/movie' +
+							 '?api_key='+ this.apiKey +
 							 '&query='+ this.query +
 							 '&page=' + this.currentPage +
 							 '&language=ru';
@@ -91,6 +92,31 @@ var app = new Vue({
 			for (var i=this.pagination.from ; i <= this.pagination.to; i++) {
 				this.pagination.numList.push(i)
 			}
+		},
+		openItem: function(item_id){
+			var searchLine = 'https://api.themoviedb.org/3/movie/' +
+							item_id +
+							'?api_key='+ this.apiKey +
+							'&language=ru';
+
+			if (item_id){
+				this.$http.get( searchLine, function(data, status, request){
+					if(status == 200){
+						this.searchResult = data;
+
+						if ( data.total_results == 0){
+							this.errorMsg = 'Ничего не найдено =(';
+						}
+
+						console.log(this.searchResult)
+					} else {
+						this.errorMsg = 'Ошибка подключения к серверу';
+					}
+				});
+			} else {
+				this.searchResult = [];
+				this.errorMsg = 'Почему то не открывается';
+			};
 		}
 	}
 });

@@ -24,6 +24,7 @@ input, textarea { -webkit-appearance: none; background-color: #343841;}
 .container { min-width: 320px;}
 .pagi { text-align: center;}
 .nowrap { white-space: nowrap;}
+.mgb15 { margin-bottom: 15px;}
 
 h1 { 
 	font-size: 24px; 
@@ -97,10 +98,10 @@ footer { position: absolute; z-index: 2; bottom: 0; left: 0; right: 0; margin: a
 	.list-group-item .desc { 
 		position: absolute; z-index: 2; padding: 70px 10px 10px; margin: auto; left: 0; right: 0; bottom: 0; top: 0;
 		
-background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 38%, rgba(0,0,0,0.8) 100%);
-background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 38%,rgba(0,0,0,0.8) 100%);
-background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 38%,rgba(0,0,0,0.8) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 );
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 38%, rgba(0,0,0,0.8) 100%);
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 38%,rgba(0,0,0,0.8) 100%);
+		background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 38%,rgba(0,0,0,0.8) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 );
 
 	}
 }
