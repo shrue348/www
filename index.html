@@ -43,8 +43,8 @@
 				</a>
 			</div>
 
-			<div class="aligncenter">
-				<div v-if="searchResult['total_pages'] > 1" class="btn-group pagi" role="group" aria-label="First group">
+			<div v-if="searchResult['total_pages'] > 1" transition="expand" class="aligncenter">
+				<div class="btn-group pagi" role="group" aria-label="First group">
 					<button v-on:click="pageGo( 1 )" class="btn btn-default" type="button">«</button>
 					<button v-on:click="pagiPrev" class="btn btn-default" type="button">‹</button>
 
@@ -56,7 +56,7 @@
 				
 			</div>
 			
-			<div class="page_count aligncenter">
+			<div v-if="searchResult['total_pages'] > 1" transition="expand" class="page_count aligncenter" >
 				<small>
 					Объектов: {{ searchResult.total_results }},
 					Страниц: {{ searchResult.total_pages }} 
@@ -66,7 +66,7 @@
 
 		<div v-if="searchResult['id']" transition="expand" class="box">
 			<div class="list-group">
-				<div class="list-group-item clearfix">
+				<div class="list-group-item clearfix mgb15">
 					<img v-if="searchResult.poster_path" src="{{thumb}}{{searchResult.poster_path}}" alt="{{searchResult.title}}"/>
 
 					<div class="desc">
@@ -78,6 +78,8 @@
 						<p>{{searchResult.overview}}</p>
 					</div>
 				</div>
+
+				<button class="btn btn-default" v-on:click="searchQuery">Назад</button>
 			</div>
 		</div>
 
