@@ -5,6 +5,7 @@ li { list-style: none;}
 img { max-width: 100%;}
 
 input, textarea { -webkit-appearance: none; background-color: #343841;}
+.clearboth { clear: both;}
 .form-control { background-color: #343841; border-color: #40444F; color: #fff;}
 .btn-default { background-color: #2776C5; border-color: #40444F; color: #fff;}
 
@@ -31,7 +32,7 @@ h1 {
 	text-align: center; 
 }
 
-h1, h2, h3, h4, h5, h6 { font-weight: 100; color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);}
+h1, h2, h3, h4, h5, h6 { font-weight: 300; color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);}
 
 .btn-default.focus, .btn-default:focus {
     background-color: #fff;
@@ -50,6 +51,9 @@ button.list-group-item:hover {background-color: #2C5C90 !important; color: #fff 
 .list-group-item { border-color: #40444F; background-color: #343841; position: relative;}
 .list-group-item img { width: 100%; max-width: 150px; float: left; margin-right: 15px;}
 .list-group-item .desc { overflow: hidden;}
+
+
+.list-group-item.in_item .desc { overflow: visible; }
 
 
 #app.container { min-height: 100vh; box-sizing: border-box; padding-bottom: 50px; position: relative; }
@@ -93,9 +97,9 @@ footer { position: absolute; z-index: 2; bottom: 0; left: 0; right: 0; margin: a
 	#app.container { padding-left: 7px; padding-right: 7px;}
 
 
-	.list-group-item { height: 160px; overflow: hidden;}
-	.list-group-item img { max-width: 100%; position: absolute; top: -30%; left: 0; top: 0; z-index: 1; margin: 0;}
-	.list-group-item .desc { 
+	.list-group-item.list_item { height: 160px; overflow: hidden;}
+	.list-group-item.list_item img { max-width: 100%; position: absolute; top: -30%; left: 0; top: 0; z-index: 1; margin: 0;}
+	.list-group-item.list_item .desc { 
 		position: absolute; z-index: 2; padding: 70px 10px 10px; margin: auto; left: 0; right: 0; bottom: 0; top: 0;
 		
 		background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 38%, rgba(0,0,0,0.8) 100%);

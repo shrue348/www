@@ -27,7 +27,7 @@
 		
 		<div v-if="searchResult['total_results'] > 0" transition="expand" class="box">
 			<div class="list-group">
-				<a v-for="item in searchResult['results']" class="list-group-item clearfix" v-on:click="openItem(item.id)">
+				<a v-for="item in searchResult['results']" class="list-group-item list_item clearfix" v-on:click="openItem(item.id)">
 
 					<img v-if="item.poster_path" src="{{thumb}}{{item.poster_path}}" alt="{{item.title}}"/>
 					<img v-else src="/img/dummy.png" alt="{{item.title}}"/>
@@ -66,8 +66,8 @@
 
 		<div v-if="searchResult['id']" transition="expand" class="box">
 			<div class="list-group">
-				<div class="list-group-item clearfix mgb15">
-					<img v-if="searchResult.poster_path" src="{{thumb}}{{searchResult.poster_path}}" alt="{{searchResult.title}}"/>
+				<div class="list-group-item in_item clearfix ">
+					<img class="mgb15" v-if="searchResult.poster_path" src="{{thumb}}{{searchResult.poster_path}}" alt="{{searchResult.title}}"/>
 
 					<div class="desc">
 						<h2>{{searchResult.title}} <small>({{ searchResult.original_title }})</small></h2>
@@ -75,11 +75,10 @@
 						<ul class="mgb15">
 							<li v-for="genre in searchResult['genres']">- {{ genre.name }}</li>
 						</ul>
-						<p>{{searchResult.overview}}</p>
+						<p class="mgb15 clearboth">{{searchResult.overview}}</p>
+						<button class="btn btn-default" v-on:click="searchQuery">Назад</button>
 					</div>
 				</div>
-
-				<button class="btn btn-default" v-on:click="searchQuery">Назад</button>
 			</div>
 		</div>
 
