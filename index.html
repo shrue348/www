@@ -27,16 +27,16 @@
 		
 		<div v-if="searchResult['total_results'] > 0" transition="expand" class="box">
 			<div class="list-group">
-				<a v-for="item in searchResult['results']" class="list-group-item ">
-					<div class="row">
-						<div class="col-md-1 col-sm-2 col-xs-3">
-							<img v-if="item.poster_path" src="{{thumb}}{{item.poster_path}}" alt="{{item.title}}"/>
-							<img v-else src="/img/dummy.png" alt="{{item.title}}"/>
+				<a v-for="item in searchResult['results']" class="list-group-item clearfix">
 
-						</div>
+					<img v-if="item.poster_path" src="{{thumb}}{{item.poster_path}}" alt="{{item.title}}"/>
+					<img v-else src="/img/dummy.png" alt="{{item.title}}"/>
+					
+					<div class="desc">
 						<h4>{{item.title}} <small>({{ item.original_title }})</small></h4>
 						<p class="date">{{item.release_date}}</p>
 					</div>
+			
 						
 					<!-- <p><small>{{ item.overview}}</small></p> -->
 					<!-- <a href="#" class="btn btn-primary" role="button">Подробнее</a>  -->

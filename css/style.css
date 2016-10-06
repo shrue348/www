@@ -39,9 +39,16 @@ h1, h2, h3, h4, h5, h6 { font-weight: 100; color: #fff; text-shadow: 0 1px 2px r
 }
 
 .input-group, .list-group { box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.15); }
-.list-group-item { border-color: #40444F; background-color: #343841;}
-a.list-group-item:focus, a.list-group-item:hover, a.list-group-item:active, button.list-group-item:focus, button.list-group-item:hover {background-color: #2C5C90 !important; color: #fff !important;}
-.list-group-item img { width: 100%;}
+
+a.list-group-item:focus, 
+a.list-group-item:hover, 
+a.list-group-item:active, 
+button.list-group-item:focus, 
+button.list-group-item:hover {background-color: #2C5C90 !important; color: #fff !important;}
+
+.list-group-item { border-color: #40444F; background-color: #343841; position: relative;}
+.list-group-item img { width: 100%; max-width: 150px; float: left; margin-right: 15px;}
+.list-group-item .desc { overflow: hidden;}
 
 
 #app.container { min-height: 100vh; box-sizing: border-box; padding-bottom: 50px; position: relative; }
@@ -84,4 +91,16 @@ footer { position: absolute; z-index: 2; bottom: 0; left: 0; right: 0; margin: a
 
 	#app.container { padding-left: 7px; padding-right: 7px;}
 
+
+	.list-group-item { height: 160px; overflow: hidden;}
+	.list-group-item img { max-width: 100%; position: absolute; top: -30%; left: 0; top: 0; z-index: 1; margin: 0;}
+	.list-group-item .desc { 
+		position: absolute; z-index: 2; padding: 70px 10px 10px; margin: auto; left: 0; right: 0; bottom: 0; top: 0;
+		
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 38%, rgba(0,0,0,0.8) 100%);
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 38%,rgba(0,0,0,0.8) 100%);
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 38%,rgba(0,0,0,0.8) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 );
+
+	}
 }
