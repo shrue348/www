@@ -13,16 +13,16 @@
 <body>
 	<div id="app" class="container">
 
-		<header v-bind:class="[ searchResult.total_results >= 0 || searchResult.id ? 'finded' : '' ]">
+		<header v-bind:class="[ searchResult.total_results >= 0 || searchResult.id ? 'finded' : '' ]" >
 			<h1><img src="img/logo.png" alt=""> <span class="nowrap">vue.js TheMovieDB search app</span></h1>
 			<!-- <p>Вы ищите {{ query }}</p> -->
 
-			<div class="box input-group">
+			<form class="box input-group" v-on:submit.prevent="searchQuery">
 				<input v-model="query" class="form-control" >
 				<span class="input-group-btn">
-					<button v-on:click="searchQuery" class="btn btn-default">Искать</button>
+					<button type="submit" class="btn btn-default">Искать</button>
 				</span>
-			</div>
+			</form>
 		</header>
 		
 		<div v-if="searchResult['total_results'] > 0" transition="expand" class="box">
