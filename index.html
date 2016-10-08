@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
-	<div id="app" class="container">
+	<div id="app" class="container" v-cloak>
 
 		<header v-bind:class="[ searchResult.total_results >= 0 || searchResult.id ? 'finded' : '' ]" >
 			<h1><img src="img/logo.png" alt=""> <span class="nowrap">vue.js TheMovieDB search app</span></h1>

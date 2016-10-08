@@ -117,7 +117,11 @@ var app = new Vue({
 				this.searchResult = [];
 				this.errorMsg = 'Почему то не открывается';
 			};
+		},
+		init: function(){
+
 		}
 	}
 });
 
+app.init();

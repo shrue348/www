@@ -7,7 +7,13 @@ img { max-width: 100%;}
 input, textarea { -webkit-appearance: none; background-color: #343841;}
 .clearboth { clear: both;}
 .form-control { background-color: #343841; border-color: #40444F; color: #fff;}
+
+.form-control:focus + .input-group-btn > .btn{ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6); border-color: #66afe9; }
+.form-control + .input-group-btn > .btn{ transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;}
+
 .btn-default { background-color: #2776C5; border-color: #40444F; color: #fff;}
+.btn-default:hover { background-color: #1260D9; color: #fff; border-color: #40444F;}
+.btn-default:active { background-color: #1260D9 !important; color: #fff; border-color: #40444F;}
 
 
 .aligncenter { text-align: center; }
@@ -46,7 +52,8 @@ a.list-group-item:focus,
 a.list-group-item:hover, 
 a.list-group-item:active, 
 button.list-group-item:focus, 
-button.list-group-item:hover {background-color: #2C5C90 !important; color: #fff !important;}
+button.list-group-item:hover { background-color: #2C5C90 !important; color: #fff !important;}
+button.list-group-item:active { background-color: #1260D9 !important;}
 
 .list-group-item { border-color: #40444F; background-color: #343841; position: relative;}
 .list-group-item img { width: 100%; max-width: 150px; float: left; margin-right: 15px;}
@@ -55,7 +62,9 @@ button.list-group-item:hover {background-color: #2C5C90 !important; color: #fff 
 
 .list-group-item.in_item .desc { overflow: visible; }
 
-
+[v-cloak] {
+  display: none;
+}
 #app.container { min-height: 100vh; box-sizing: border-box; padding-bottom: 50px; position: relative; }
 
 h1 > img, h1 > span { margin-bottom: 5px; font-weight: 100; }
